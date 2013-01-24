@@ -36,7 +36,6 @@ module Kafka
       batch = Kafka::Batch.new
       block.call( batch )
       self.send(batch.messages)
-      batch.messages.clear
     end
   end
 end
